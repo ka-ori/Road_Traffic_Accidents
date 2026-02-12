@@ -2,14 +2,8 @@
 
 # Data Cleaning & Transformation Documentation: RTA Dataset
 
-## 1. Data Integrity & Recovery
-The previously "cleaned" Kaggle version resulted in significant information loss by dropping 17 columns. To meet the "Analysis Depth" criteria, the following columns must be retained or recovered from the original dataset:
-* **Time:** Essential for identifying rush-hour trends.
-* **Number_of_casualties:** Critical for calculating injury rates.
-* **Day_of_week:** Necessary for weekday vs. weekend behavioral analysis.
-* **Type_of_vehicle:** Required for sectoral insights (e.g., commercial vs. private).
 
-## 2. Text Standardization & Typo Correction
+## 1. Text Standardization & Typo Correction
 To satisfy the "Dictionary Check" requirements, text values must be uniform to prevent fragmented charts.
 
 ### A. The "Stationary" Typo
@@ -26,7 +20,7 @@ The dataset uses multiple ways to represent missing data (`na`, `unknown`, `Unkn
 Google Sheets pivot tables are case-sensitive. 
 * **Action:** Convert all categorical columns to "Proper Case" or ensure no strings like `other` and `Other` coexist in the same column.
 
-## 3. Feature Engineering (For Advanced Analysis)
+## 2. Feature Engineering (For Advanced Analysis)
 Static data should be transformed into dynamic categories to provide better insights.
 
 ### A. Temporal Extraction
@@ -42,11 +36,11 @@ The `Driving_experience` column contains too many granular categories (1-2yr, 2-
     * **Senior:** 5-10yr
     * **Expert:** Above 10yr
 
-## 4. Data Type Validation
+## 3. Data Type Validation
 Ensure Google Sheets recognizes the data correctly for mathematical operations.
 * **Numerical Check:** Ensure `Number_of_vehicles_involved` and `Number_of_casualties` are formatted as **Numbers**, not **Plain Text**. 
 * **Severity Labels:** While the Kaggle version converted `Accident_severity` to numbers (1, 2), retain the text labels (`Slight Injury`, `Serious Injury`, `Fatal injury`). Text labels are more intuitive for dashboard filters and stakeholder readability.
 
-## 5. Final Dictionary Check (Post-Cleaning)
+## 4. Final Dictionary Check (Post-Cleaning)
 Before finalizing the "Master Sheet," verify the unique counts of categories.
 * **Validation Step:** Use `=UNIQUE(A:A)` in a separate sheet for every categorical column. If you see both `Unknown` and `na`, or `Asphalt` and `asphalt`, the cleaning is incomplete.
