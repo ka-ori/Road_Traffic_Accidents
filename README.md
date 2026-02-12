@@ -39,7 +39,7 @@ The `Driving_experience` column contains too many granular categories (1-2yr, 2-
 ## 3. Data Type Validation
 Ensure Google Sheets recognizes the data correctly for mathematical operations.
 * **Numerical Check:** Ensure `Number_of_vehicles_involved` and `Number_of_casualties` are formatted as **Numbers**, not **Plain Text**. 
-* **Severity Labels:** While the Kaggle version converted `Accident_severity` to numbers (1, 2), retain the text labels (`Slight Injury`, `Serious Injury`, `Fatal injury`). Text labels are more intuitive for dashboard filters and stakeholder readability.
+* **Severity Labels:** While the Kaggle version converted `Casuality_severity` to numbers (1, 2), retain the text labels (`Slight Injury`, `Serious Injury`, `Fatal injury`). Text labels are more intuitive for dashboard filters and stakeholder readability.
 
 ## 4. Final Dictionary Check (Post-Cleaning)
 Before finalizing the "Master Sheet," verify the unique counts of categories.
