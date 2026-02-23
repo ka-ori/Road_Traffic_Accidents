@@ -250,4 +250,8 @@ The following pivot table structures were utilized to isolate risk factors and t
 
 ---
 
+
+<img width="1082" height="743" alt="image" src="https://github.com/user-attachments/assets/cebbdce7-c87c-4314-8edb-6545045e4a74" />
+
+
 Would you like me to format this into a downloadable code block so you can easily copy and paste it into a fresh `.md` file?
